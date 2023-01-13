@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:paddingTop="?attr/actionBarSize"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgTittle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_sophos"
+        android:layout_height="300dp"
+        android:layout_width="0dp"
+        android:padding="16dp"
+        android:contentDescription="TODO" />
+
+
+    <TextView
+        android:id="@+id/TVSign"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imgTittle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:paddingLeft="55dp"
+        android:text="@string/UserSignIn"
+        android:textColor="@color/purple_sophos"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TIUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/StringTIEmail"
+        android:textColorHint="@color/purple_sophos"
+        app:startIconDrawable="@drawable/ic_account_circle_1"
+        app:startIconTint="@color/purple_sophos"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/TVSign"
+        app:layout_constraintStart_toStartOf="@id/TVSign"
+        app:layout_constraintEnd_toEndOf="@id/TVSign"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:textColor="@color/purple_sophos"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TIPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/StringTIPassword"
+        android:textColorHint="@color/purple_sophos"
+        android:layout_marginTop="16dp"
+        app:startIconDrawable="@drawable/ic_key"
+        app:startIconTint="@color/purple_sophos"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/purple_sophos"
+        app:layout_constraintTop_toBottomOf="@id/TIUser"
+        app:layout_constraintStart_toStartOf="@id/TIUser"
+        app:layout_constraintEnd_toEndOf="@id/TIUser"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/BtnSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/TIPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/Btn_SignIn"
+        android:backgroundTint="@color/purple_sophos"
+        android:textColor="@color/white"
+        android:paddingHorizontal="100dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_fingerprint"
+        app:iconTint="@color/purple_sophos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/txtBtnFingerSignIn"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/purple_sophos"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

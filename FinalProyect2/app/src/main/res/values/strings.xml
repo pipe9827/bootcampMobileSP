@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Felipe</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="UserSignIn">Ingresa tus datos para acceder</string>
+    <string name="txtBtnFingerSignIn">Ingresar con huella</string>
+    <string name="StringTIEmail">Email</string>
+    <string name="StringTIPassword">Password</string>
+    <string name="Btn_SignIn">Ingresar</string>
+    <string name="title_activity_menu_screen">menuScreen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Regresar</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_offices">Offices</string>
+    <string name="send_documents_menu">Enviar documentos</string>
+    <string name="see_documents_menu">Ver Documentos</string>
+    <string name="offices_menu">Oficinas</string>
+    <string name="night_mode_menu">Modo Nocturno</string>
+    <string name="english_menu">Idioma Ingles</string>
+    <string name="ETWelcome">Bienvenido</string>
+    <string name="ET_subtitle">Estas son las opciones \n que tenemos para ti</string>
+    <string name="TVSendDocuments">Envío de documentación</string>
+    <string name="TILName">Nombre</string>
+    <string name="TILLastName">Apellido</string>
+    <string name="TILMail">Correo Electronico</string>
+    <string name="TILDocumentNumber">Numero de documento</string>
+    <string name="TILAttachType">Tipo de Adjunto</string>
+    <string name="MBDocument">Documento</string>
+    <string name="MBSend">ENVIAR</string>
+    <string name="TVDocuments">Documentos</string>
+    <string-array name="documentTypes">
+        <item>Seleccione</item>
+        <item>CC</item>
+        <item>Pasaporte</item>
+        <item>TI</item>
+    </string-array>
+    <string-array name="cities">
+        <item>Seleccione</item>
+        <item>Armenia</item>
+        <item>Bogota</item>
+        <item>Medellin</item>
+    </string-array>
+</resources>

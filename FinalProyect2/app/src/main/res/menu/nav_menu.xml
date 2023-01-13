@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/send_documents_menu"
+        android:title="@string/send_documents_menu"
+        app:showAsAction="never"
+        android:iconTint="@color/purple_sophos"
+        />
+    <item
+        android:id="@+id/see_documents_menu"
+        android:title="@string/see_documents_menu"
+        app:showAsAction="never"
+        android:color="@color/purple_sophos"
+        />
+    <item
+        android:id="@+id/offices_menu"
+        android:title="@string/offices_menu"
+        app:showAsAction="never"
+        android:iconTint="@color/purple_sophos"
+        />
+    <item
+        android:id="@+id/night_mode_menu"
+        android:title="@string/night_mode_menu"
+        app:showAsAction="never"
+        android:iconTint="@color/purple_sophos"
+        />
+    <item
+        android:id="@+id/english_menu"
+        android:title="@string/english_menu"
+        app:showAsAction="never"
+        android:iconTint="@color/purple_sophos"
+        />
+
+</menu>

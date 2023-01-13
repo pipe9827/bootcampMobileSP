@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.view.MenuScreen">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/nav_menu"
+        app:title="@string/app_name"
+        app:titleMarginTop="20dp"
+        app:titleTextColor="@color/purple_sophos"
+        android:orientation="vertical"
+        android:gravity="top"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/MCVMainImage"
+        android:layout_width="414dp"
+        android:layout_height="280dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBar">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imgPC"
+                android:layout_width="fill_parent"
+                android:layout_height="260dp"
+                android:src="@drawable/ic_pc"
+                android:contentDescription="@string/ETWelcome"/>
+
+            <EditText
+                android:id="@+id/ETWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:paddingStart="25dp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:text="@string/ETWelcome"
+                android:textColor="@color/white"
+                android:background="@android:color/transparent"
+                />
+            <EditText
+                android:id="@+id/ETOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="150dp"
+                android:paddingLeft="60dp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:text="@string/ET_subtitle"
+                android:textColor="@color/white"
+                android:background="@android:color/transparent"
+                />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/MCVSendDocumentsButton"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        app:cardElevation="2dp"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/MCVMainImage"
+        app:strokeColor="@color/pink_sophos"
+        app:strokeWidth="2dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/IVSendDocuments"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_send_document" />
+
+            <EditText
+                android:id="@+id/ETSendDocuments"
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="@string/send_documents_menu"
+                android:textColor="@color/pink_sophos"
+                 />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/BTNSendDocument"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="150dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/pink_sophos"
+                app:cardElevation="2dp"
+                android:text="@string/Btn_SignIn"
+                android:textColor="@color/pink_sophos"
+                app:icon="@drawable/ic_arrow_right"
+                app:iconTint="@color/pink_sophos"
+                app:iconGravity="end"
+                app:cornerRadius="15dp">
+
+            </com.google.android.material.button.MaterialButton>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/MCVSeeDocumentsButton"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/MCVSendDocumentsButton"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/purple_documents"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/IVSeedDocuments"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_search_document" />
+
+            <EditText
+                android:id="@+id/ETSeedDocuments"
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:text="@string/see_documents_menu"
+                android:textColor="@color/purple_documents"
+                android:background="@android:color/transparent"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/BTNSeeDocument"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="150dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/purple_documents"
+                app:cardElevation="2dp"
+                android:text="@string/Btn_SignIn"
+                android:textColor="@color/purple_documents"
+                app:icon="@drawable/ic_arrow_right"
+                app:iconTint="@color/purple_documents"
+                app:iconGravity="end"
+                app:cornerRadius="15dp">
+
+            </com.google.android.material.button.MaterialButton>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/MCVOffices"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/MCVSeeDocumentsButton"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/green_offices"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/IVLocation"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_location" />
+
+            <EditText
+                android:id="@+id/ETLocation"
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:text="@string/offices_menu"
+                android:textColor="@color/green_offices"
+                android:background="@android:color/transparent"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/BTNLocation"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="150dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/green_offices"
+                app:cardElevation="2dp"
+                android:text="@string/Btn_SignIn"
+                android:textColor="@color/green_offices"
+                app:icon="@drawable/ic_arrow_right"
+                app:iconTint="@color/green_offices"
+                app:iconGravity="end"
+                app:cornerRadius="15dp">
+
+            </com.google.android.material.button.MaterialButton>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

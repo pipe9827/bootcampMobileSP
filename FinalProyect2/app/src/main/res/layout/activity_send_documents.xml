@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.view.SendDocuments">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/nav_menu"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/MBBack"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_arrow_back"
+            app:iconTint="@color/purple_sophos"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/previous"
+            android:textColor="@color/purple_sophos"
+            android:textSize="25sp"
+            />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <TextView
+        android:id="@+id/TVTitleSendDocuments"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/appBar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/TVSendDocuments"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <ImageView
+        android:id="@+id/IVCamera"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toBottomOf="@id/TVTitleSendDocuments"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_add_a_photo" />
+
+    <Spinner
+        android:id="@+id/SPTypeDocument"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/IVCamera"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:entries="@array/documentTypes"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TIDocumentNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/TILDocumentNumber"
+        app:startIconDrawable="@drawable/ic_number_document"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/SPTypeDocument"
+        app:layout_constraintStart_toStartOf="@id/SPTypeDocument"
+        app:layout_constraintEnd_toEndOf="@id/SPTypeDocument"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETDocumentNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:textColor="@color/purple_sophos"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TINames"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/TILName"
+        app:startIconTint="@color/purple_sophos"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/TIDocumentNumber"
+        app:layout_constraintStart_toStartOf="@id/TIDocumentNumber"
+        app:layout_constraintEnd_toEndOf="@id/TIDocumentNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:textColor="@color/purple_sophos"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TILastNames"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/TILLastName"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/TINames"
+        app:layout_constraintStart_toStartOf="@id/TINames"
+        app:layout_constraintEnd_toEndOf="@id/TINames"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETLastNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:textColor="@color/purple_sophos"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TIEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/TILMail"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/TILastNames"
+        app:layout_constraintStart_toStartOf="@id/TILastNames"
+        app:layout_constraintEnd_toEndOf="@id/TILastNames"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:textColor="@color/purple_sophos"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/SPCities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/TIEmail"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:entries="@array/cities"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TITypeAttach"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/TILAttachType"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/SPCities"
+        app:layout_constraintStart_toStartOf="@id/SPCities"
+        app:layout_constraintEnd_toEndOf="@id/SPCities"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETTypeAttach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:textColor="@color/purple_sophos"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/MBAttachDocument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/MBDocument"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_backup"
+        android:backgroundTint="@color/pink_sophos"
+        app:layout_constraintStart_toEndOf="@id/TITypeAttach"
+        app:layout_constraintTop_toBottomOf="@id/TITypeAttach"
+        app:layout_constraintStart_toStartOf="@id/TITypeAttach"
+        app:cornerRadius="15dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/MBSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/MBSend"
+        android:backgroundTint="@color/pink_sophos"
+        app:layout_constraintTop_toBottomOf="@+id/MBAttachDocument"
+        app:layout_constraintStart_toStartOf="@+id/MBAttachDocument"
+        app:layout_constraintEnd_toEndOf="@id/TITypeAttach"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cornerRadius="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
