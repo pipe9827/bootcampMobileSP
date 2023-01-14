@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
+import com.example.finalproyect2.Model.PersonalInfo
 import com.example.finalproyect2.R
 import com.example.finalproyect2.databinding.ActivityMenuScreenBinding
 
@@ -15,6 +16,10 @@ class MenuScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMenuScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+       // val email = intent.extras?.getString("email")
+
+
 
         binding.BTNSendDocument.setOnClickListener{
             val intent: Intent = Intent(this, SendDocuments:: class.java)

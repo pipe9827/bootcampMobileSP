@@ -33,7 +33,7 @@ class AuthViewModel @Inject constructor (
                 repository.login(email, password)
             }!!
         }catch (e: Exception) {
-            Log.d("PUTO EL QUE LO LEA", "${e.message}")
+            Log.d("Important message", "${e.message}")
         }
     }
 }
